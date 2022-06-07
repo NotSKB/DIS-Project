@@ -1,80 +1,199 @@
-
-body{
+body {
     margin: 0;
 }
 
-.flexbox-container{
+.flexbox-container1 {
     display: flex;
     background-color: black;
     color: white;
     justify-content: start;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1;
 }
 
-.flexbox-item{
+.flexbox-item1 {
     padding: 1.5rem;
 }
 
-.flexbox-item:hover{
+.flexbox-item1:hover {
     background-color: darkgray;
 }
 
-.pages{
+.pages {
     padding: 1.875rem;
 }
 
-.title{
-  font-size: 1.25rem;
-  font-family: 'Kdam Thmor Pro', sans-serif;
+.title {
+    font-size: 1.25rem;
+    font-family: 'Kdam Thmor Pro', sans-serif;
 }
 
-a{
+a {
     text-decoration: none;
     color: white;
 }
-.page-title{
+
+.page-title {
     display: flex;
     align-items: center;
 }
 
 @media screen and (max-width: 480px) {
-    .flexbox-container{
+    .flexbox-container1 {
         flex-wrap: wrap;
         flex-direction: column;
     }
+
+    .flexbox-container2 {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .flexbox-item21{
+        padding: 20px;
+        width: 100%;
+    }
 }
 
-.soccer-player{
+
+.soccer-player {
     width: 30px;
 }
 
 .dropdown {
     position: relative;
     display: inline-block;
-  }
-  
-  .dropdown-content {
+}
+
+.dropdown-content {
     display: none;
     position: absolute;
+    bottom: -43px;
+    left: 0;
     background-color: #f1f1f1;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
-  }
-  
-  .dropdown-content a {
+}
+
+.dropdown-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: flex;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/********************************************************************/
+/* Styling related to Flex Container 2 */
+.flexbox-container2{
+    display: flex;
+    z-index: 0;
+    align-items: center;
+}
+
+.flexbox-item21{
+    padding: 50px;
+    width: 55%;
+}
+
+.flexbox-item22{
+    width: 30%;
+    padding: 25px;
+    font-size: 1rem;
+}
+
+.unameandpass{
+    border-width: 0;
+    border-style: solid;
+    border-color: #3b3b3b;
+    border-bottom-width: 1px;
+    padding: 2px;
+}
+
+/* Flexbox item 2 */
+/* .flexbox-item2{
+    
+    width: 200px;
+    height: 100px;
+    background-color: yellow;
+    border: 3px solid;
+} */
+
+/* Styling related to Slideshow */
+#slider {
+	overflow: hidden;
+}
+#slider figure {
+	position: relative;
+	width: 500%;
+	margin: 0;
+	left: 0;
+	animation: 20s slider infinite;
+}
+#slider figure img {
+	float: left;
+	width: 20%;
+}
+
+@keyframes slider {
+	0% {
+		left: 0;
+	}
+	20% {
+		left: 0;
+	}
+	25% {
+		left: -100%;
+	}
+	45% {
+		left: -100%;
+	}
+	50% {
+		left: -200%;
+	}
+	70% {
+		left: -200%;
+	}
+	75% {
+		left: -300%;
+	}
+	95% {
+		left: -300%;
+	}
+	100% {
+		left: -400%;
+	}
+}
+
+.btn {
+    -webkit-border-radius: 20;
+    -moz-border-radius: 20;
+    border-radius: 20px;
+    -webkit-box-shadow: 4px 4px 8px #666666;
+    -moz-box-shadow: 4px 4px 8px #666666;
+    box-shadow: 4px 4px 8px #666666;
+    font-family: Courier New;
+    color: #ffffff;
+    font-size: 15px;
+    background: #000000;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
   }
   
-  .dropdown-content a:hover {background-color: #ddd;}
-  
-  .dropdown:hover .dropdown-content {display: block;}
-  
-  .dropdown:hover .dropbtn {background-color: #3e8e41;}
-
-
+  .btn:hover {
+    background: #3b3b3b;
+    text-decoration: none;
+  }
 
 /*
 @media screen and (max-width: 480px) {
