@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="icons and images/icons/favicon.ico">
+    <script src="https://kit.fontawesome.com/306b2e72dc.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/styles.css">
     <title>PlayerDB</title>
 </head>
@@ -15,8 +16,11 @@
 <body>
     <div class="flexbox-container1">
         <div class="flexbox-item1 title">
-            <a class="page-title" href="index.html"><img class="soccer-player" src="icons and images/icons/soccer-player.png"
-                    alt="soccerPlayer img"> PlayerDB</a>
+            <a class="page-title" href="index.html"><img class="soccer-player"
+                    src="icons and images/icons/soccer-player.png" alt="soccerPlayer img"> PlayerDB</a>
+        </div>
+        <div class="flexbox-item1 pages">
+            <a href="index.html">Home</a>
         </div>
         <div class="flexbox-item1 pages dropdown">
             League
@@ -25,52 +29,94 @@
             </div>
         </div>
         <div class="flexbox-item1 pages">
-            About Us
+            <a href="aboutus.html">About Us</a>
         </div>
     </div>
 
     <div class="flexbox-container2">
         <div class="flexbox-item21">
-        <div id="slider">
-            <figure>
-                <img src="icons and images/images/Ronaldo.jpg">
-                <img src="icons and images/images/Messi.jpg">
-                <img src="icons and images/images/Mbappe.jpg">
-                <img src="icons and images/images/Neymar.jpg">
-                <img src="icons and images/images/Ronaldo.jpg">
-            </figure>
-        </div>
+            <div id="slider">
+                <figure>
+                    <img src="icons and images/images/Ronaldo.jpg">
+                    <img src="icons and images/images/Messi.jpg">
+                    <img src="icons and images/images/Mbappe.jpg">
+                    <img src="icons and images/images/Neymar.jpg">
+                    <img src="icons and images/images/Ronaldo.jpg">
+                </figure>
+            </div>
         </div>
         <div class="flexbox-item22">
             <div class="form-container">
                 <form action="#home">
-                    <h3>Login</h3>
-                    <label for="uname">Username</label>
+                    <h3 class="login">Login</h3>
+                    <!-- <label for="uname">Username</label> -->
                     <br>
-                    <input type="text" placeholder="Enter Username*" name="uname" required class="unameandpass">
+                    <div class="input-icons">
+                        <i class="fa fa-user icon">
+                        </i>
+                        <input class="input-field unameandpass" type="text" placeholder="Username" name="uname"
+                            required>
+                    </div>
                     <br>
-                    <label for="passwrod">Password</label>
+                    <!-- <label for="passwrod">Password</label> -->
                     <br>
-                    <input type="password" placeholder="Password*" name="password" required class="unameandpass">
+                    <div class="input-icons">
+                        <i class="fa fa-key icon">
+                        </i>
+                        <input class="input-field unameandpass" type="password" placeholder="Password" name="password"
+                            required>
+                    </div>
                     <br>
                     <br>
                 </form>
+                <!-- <p class="reset"><a href="" class="reset"> Forgot Username or Password?</a></p> -->
             </div>
             <div class="form-footer">
                 <input type="submit" value="submit" class="btn">
+                <h5>New User? <a href="" class="signup">Signup</a></h5>
             </div>
-            
         </div>
-
-
-
-
-
-
-        
     </div>
-
-
+    <hr class="horizontal-line">
+    <div class="highlights">
+        <h2 class="highlights-text">Why Us?</h2>
+        <div class="highlights-container">
+            <div class="box">
+                <div class="highlights-text-box">
+                    <h3 class="highlights-h3">Extensive</h3>
+                    <p>Only source for all the player data covering 10 best football leagues in the world. Only source
+                        for all the player data covering 10 best football leagues in the world</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="highlights-text-box">
+                    <h3 class="highlights-h3">Reliable</h3>
+                    <p>All the data is sourced and verified with scouts assigned for each League. All the data is
+                        sourced and verified with scouts assigned for each League</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="highlights-text-box">
+                    <h3 class="highlights-h3">Highly Available</h3>
+                    <p>Uses state of the art technologies ranging from cloud services to blockchain technologies for the
+                        best customer experience</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="social-media">
+            <a href="https://www.linkedin.com/" target="_blank" class="footer-icon"><i
+                    class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/" target="_blank" class="footer-icon"><i
+                    class="fa-brands fa-instagram"></i></i></a>
+            <a href="https://www.twitter.com/" target="_blank" class="footer-icon"><i
+                    class="fa-brands fa-twitter"></i></a>
+        </div>
+        <div>
+            <p class="copyright"><i class="fa-solid fa-copyright"></i> 2022 PlayerDB Inc.</p>
+        </div>
+    </div>
 </body>
 
 </html>
