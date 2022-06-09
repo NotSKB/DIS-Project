@@ -254,7 +254,7 @@ a {
 
 .box {
     min-height: 20px;
-    height: 300px;
+    height: auto;
     width: 200px;
     padding: 19px;
     margin-bottom: 20px;
@@ -267,6 +267,7 @@ a {
 
 .highlights-h3 {
     margin-bottom: 40px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 
@@ -274,14 +275,14 @@ a {
 /* Footer */
 .footer {
     background-color: #ddd;
-    height: 5rem;
+    height: 9rem;
     width: 100%;
     text-align: center;
 }
 
 .footer-icon {
     padding: 10px;
-    padding-top: 30px;
+    margin-top: 30px;
     color: black;
     min-width: 10px;
     text-align: center;
@@ -297,6 +298,23 @@ a {
     font-family: 'Courier New', Courier, monospace;
     font-weight: 500;
 }
+
+.footer-page-title{
+    font-size: 2rem;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    color: #000000;
+}
+
+.tagline{
+    font-size: 12px;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer-content{
+    padding-top: 10px;
+}
+
 
 /* ********************************************************************* */
 /* Media query */
@@ -328,9 +346,34 @@ a {
     }
 }
 
+/* ::-webkit-scrollbar {
+    width: 4px;
+    border-radius: 10px;
+    height: 3px;
+    color: black;
+} */
+
 /*
 @media screen and (max-width: 480px) {
     .flexbox-item:not(.title) {
         display: flex;
     }
 }*/
+
+
+/* Aboutus.html */
+/* Team Details Styling */
+.highlights-aboutus{
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.highlights-box{
+    height: auto;
+    width: auto;
+    margin: 20px 30px 50px;
+    background-color: #ddd;
+    border: 2px solid #e3e3e3;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 5%);
+}
