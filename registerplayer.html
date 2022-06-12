@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Montserrat&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="iconsandimages/icons/favicon.ico">
+    <script src="https://kit.fontawesome.com/306b2e72dc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>PlayerDB</title>
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <div class="flexbox-container1">
+        <!-- Title -->
+        <div class="flexbox-item1 title">
+            <a class="page-title" href="index.html"><img class="soccer-player"
+                    src="iconsandimages/icons/soccer-player.png" alt="soccerPlayer img"> PlayerDB</a>
+        </div>
+        <!-- Navigation options -->
+        <div class="flexbox-item1 pages">
+            <a href="index.html">Home</a>
+        </div>
+        <div class="flexbox-item1 pages dropdown">
+            League
+            <div class="dropdown-content">
+                <a href="premierleague.html">Premier League</a>
+            </div>
+        </div>
+        <div class="flexbox-item1 pages">
+            <a href="aboutus.html">About Us</a>
+        </div>
+    </div>
+
+    <!-- Player Form -->
+    <div class="form-section">
+        <h3>Player Registration</h3>
+        <div class="player-form">
+            <form action="submit.html">
+                <label for="FName">First Name<span class="redstar">*</span></label>
+                <input type="text" id="FName" placeholder="First Name">
+                <br><br>
+                <label for="LName">Last Name<span class="redstar">*</span></label>
+                <input type="text" id="LName" placeholder="Last Name">
+                <br><br>
+                <label for="DOB">Date of Birth<span class="redstar">*</span></label>
+                <input type="date" id="DOB">
+                <br>
+                <br>
+                <label for="weight">Weight<span class="redstar">*</span></label>
+                <input type="number" name="weight" id="weight" placeholder="weight in kgs" required>
+                <br>
+                <br>
+                <label for="team">Team<span class="redstar">*</span></label>
+                <select id="team" name="team">
+                    <option>select team</option>
+                    <option value="MUN">Manchester United</option>
+                    <option value="MCI">Manchester City</option>
+                    <option value="LIV">Liverpool</option>
+                    <option value="THN">Tottenham Hotspur</option>
+                    <option value="WHU">West Ham United</option>
+                    <option value="ARS">Arsenal</option>
+                    <option value="CHE">Chelsea</option>
+                    <option value="CRY">Crystal Palace</option>
+                    <option value="LEE">Leeds United</option>
+                    <option value="EVE">Everton</option>
+                    <option value="BRN">Brighton</option>
+                    <option value="NUF">Newcastle United</option>
+                </select>
+                <br><br>
+                <label for="country">Country of Origin<span class="redstar">*</span></label>
+
+                <select id="country" name="country">
+                    <option>select country</option>
+                    <option value="Portugal">Portugal</option>
+                    <option value="Spain">Spain</option>
+                    <option value="UK">United Kingdom</option>
+                    <option value="South Korea">South Korea</option>
+                    <option value="Brazil">Brazil</option>
+                    <option value="Uruguay">Uruguay</option>
+                    <option value="Netherlands">Netherlands</option>
+                    <option value="USA">United States</option>
+                    <option value="India">India</option>
+                    <option value="Colombia">Colombia</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Armenia">Armenia</option>
+                </select>
+
+                <br><br>
+                <label for="Position">Position<span class="redstar">*</span></label>
+
+                <select id="Position" name="position" required>
+                    <option>select playing position</option>
+                    <option value="Striker">Striker</option>
+                    <option value="Forward">Forward</option>
+                    <option value="GK">Goal Keeper</option>
+                    <option value="CB">Central Back</option>
+                    <option value="RB">Right Back</option>
+                    <option value="LB">Left Back</option>
+                    <option value="RW">Right Winger</option>
+                    <option value="LW">Left Winger</option>
+                    <option value="CM">Central Midfielder</option>
+                </select>
+                <br><br>
+                <label for="matches">Matches Played<span class="redstar">*</span></label>
+                <input type="number" id="matches">
+                <br><br>
+                <label for="goals">Goals Scored<span class="redstar">*</span></label>
+                <input type="number" id="goals">
+
+            </form>
+
+        </div>
+    </div>
+
+    <!-- Buttons Container -->
+    <div class="buttons-container">
+        <div class="buttons">
+            <a href="premierleague.html" class="btn">Back</a>
+        </div>
+        <div class="buttons">
+            <!-- <input type="submit" value="submit" class="btn" > -->
+            <a href="submit.html" class="btn">Submit</a>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <div class="footer-content">
+            <a class="footer-page-title" href="index.html">PlayerDB</a>
+            <p class="tagline">~Redifining Scouting~</p>
+            <div class="social-media">
+                <a href="https://www.linkedin.com/" target="_blank" class="footer-icon"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/" target="_blank" class="footer-icon"><i
+                        class="fa-brands fa-instagram"></i></i></a>
+                <a href="https://www.twitter.com/" target="_blank" class="footer-icon"><i
+                        class="fa-brands fa-twitter"></i></a>
+            </div>
+            <div>
+                <p class="copyright"><i class="fa-solid fa-copyright"></i> 2022 PlayerDB Inc.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
