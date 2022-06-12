@@ -12,6 +12,7 @@
     <link rel="shortcut icon" href="iconsandimages/icons/favicon.ico">
     <script src="https://kit.fontawesome.com/306b2e72dc.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="javascript/playerDB.js"></script>
     <title>PlayerDB</title>
 </head>
 
@@ -40,9 +41,18 @@
 
     <!-- Player Form -->
     <div class="form-section">
-        <h3>Player Registration</h3>
-        <div class="player-form">
+        <h3>Edit Player Details</h3>
+        <div class="search-bar">
+        <input type="text" id="search" placeholder="search for a player">
+                <div class="buttons">
+                    <!-- <input type="submit" value="submit" class="btn" > -->
+                    <a onclick="showForm()" class="btn">Search</a>
+                </div>
+            </div>
+        <div class="player-form" id="show-form">
             <form action="submit.html">
+                <!-- <label for="search">Search<span class="redstar">*</span></label> -->
+
                 <label for="FName">First Name<span class="redstar">*</span></label>
                 <input type="text" id="FName" placeholder="First Name">
 
@@ -123,9 +133,9 @@
         <div class="buttons">
             <a href="premierleague.html" class="btn">Back</a>
         </div>
-        <div class="buttons">
+        <div class="buttons" id="show-button" >
             <!-- <input type="submit" value="submit" class="btn" > -->
-            <a href="submit.html" class="btn">Submit</a>
+            <a href="update.html" class="btn">Submit</a>
         </div>
     </div>
 
