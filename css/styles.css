@@ -99,14 +99,6 @@ a {
     text-align: center;
 }
 
-.unameandpass {
-    border-width: 0;
-    border-style: solid;
-    border-color: #3b3b3b;
-    border-bottom-width: 1px;
-    padding: 2px;
-}
-
 /* Slideshow */
 #slider {
     overflow: hidden;
@@ -184,35 +176,6 @@ a {
     text-decoration: none;
 }
 
-/* Login form */
-
-.input-icons i {
-    position: absolute;
-}
-
-.input-icons {
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-.icon {
-    padding: 10px;
-    color: black;
-    min-width: 10px;
-    text-align: center;
-}
-
-.input-field {
-    width: 70%;
-    padding: 10px;
-    text-align: center;
-    background-color: #F2F2F2;
-}
-
-.signup {
-    color: #000000;
-    text-decoration: underline;
-}
 
 
 .reset {
@@ -485,6 +448,7 @@ td a {
     width: 48%;
     height: 30px;
     margin-bottom: 2rem;
+    margin-top: auto;
 }
 
 .player-form label {
@@ -550,6 +514,20 @@ buttons {
         width: 80%;
     }
 
+    .flexbox-container-league {
+        flex-wrap: wrap;
+        flex-direction: column;
+        position: inherit;
+        align-items: center;
+        text-align: center;
+        
+    }
+
+    .flexbox-item1-league{
+        padding: 20px;
+        width: 80%;
+    }
+
     .flexbox-item22 {
         padding: 20px;
         width: 50%;
@@ -603,4 +581,160 @@ buttons {
         flex-wrap: wrap;
         flex-direction: column;
     }
+
+    .login-form{
+        margin-left:10%;
+        width: 90%;
+    }
+    .login-form label{
+        font-size: 12px;
+    }
+    .col-2 img{
+        max-width: 50%;
+        padding: 50px 60px;
+        margin: 0 10px;
+    }
 }
+
+.flexbox-container-league {
+    display: flex;
+    background-color: #F2F2F2;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+    justify-content: center;
+    text-align: center;
+}
+
+.flexbox-item1-league{
+        padding: 40px;
+        margin: 30px;
+        width: 40%;
+}
+
+/* //////////////////////////////////////////////////// */
+/* Account Page */
+.account{
+    width:60%;
+    margin: auto;
+    padding: 10px 20px;
+}
+.account-page{
+    padding:50px 0;
+    background: radial-gradient(#F2F2F2, #F2F2F2);
+}
+.form-container{
+    background: #F2F2F2;
+    width: 300px;
+    height: 400px;
+    position: relative;
+    text-align: center;
+    padding: 20px 0;
+    margin: auto;
+}
+.form-container span{
+    font-weight: bold;
+    padding: 0 5px;
+    color: #555;
+    cursor: pointer;
+    width: 110px;
+    display: inline-block;
+}
+.form-button{
+    display: inline-block;
+}
+.form-container form{
+    max-width: 300px;
+    padding: 0 20px;
+    position: absolute;
+    top: 130px;
+    transition: 1s;
+}
+.form-container form input{
+    width: 70%;
+    height: 30px;
+    margin: 8px 5px;
+    padding: 0 12px;
+    border: 1px solid #ccc;
+}
+.form-container form .btn{
+    width:50%;
+    border: none;
+    cursor: pointer;
+    margin: 10px 10px;
+}
+.form-container form .btn:focus{
+    outline: none;
+}
+#LoginForm{
+    left: -300px;
+
+}
+#RegForm{
+    left: 0;
+}
+.form-container form a{
+    font-size: 14px;
+    color: black;
+    text-decoration: underline;
+}
+
+.form-container  form h5{
+    margin-bottom: 4px;
+}
+.container{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.account-row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.col-2{
+    flex-basis: 50%;
+    min-width: 300px;
+}   
+.col-2 img{
+    max-width: 60%;
+    padding: 50px 100px;
+}
+
+#Indicator{
+    width: 70px;
+    border: none;
+    background: black;
+    height:3px;
+    margin-top: 8px;
+    transform: translateX(300px);
+    transition: 1s;
+    margin-left: 0;
+}
+.btn{
+    display: inline-block;
+    background: black;
+    color: #fff;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+}
+
+.input-field {
+    width: 75%;
+    padding: 5px;
+    background-color: #F2F2F2;
+}
+
+.unameandpass {
+    border-width: 0;
+    border-style: solid;
+    border-color: #3b3b3b;
+    border-bottom-width: 1px;
+    padding: 2px;
+}
+
+
+

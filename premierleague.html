@@ -12,6 +12,10 @@
     <link rel="shortcut icon" href="iconsandimages/icons/favicon.ico">
     <script src="https://kit.fontawesome.com/306b2e72dc.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    <script src="javascript/playerDB.js"></script>
     <title>PlayerDB</title>
 </head>
 
@@ -36,6 +40,9 @@
             </div>
             <div class="flexbox-item1 pages">
                 <a href="aboutus.html">About Us</a>
+            </div>
+            <div class="flexbox-item1 pages">
+                <a href="account.html">Account</a>
             </div>
         </div>
         <div class="premierleague-table">
@@ -149,6 +156,19 @@
                         </tr>
                     </tbody>
                 </table>
+            </div>
+        </div>
+
+        <div class="flexbox-container-league">
+            <div class="flexbox-item1-league">
+                <h3>All time matches won by the Top 5 teams</h3>
+                <canvas id="doughnut-chart"></canvas>
+                
+            </div>
+
+            <div class="flexbox-item1-league">
+                <h3>Number of Players by Position</h3>
+                <canvas id="bar-chart" width="500" height="400"></canvas>
             </div>
         </div>
 
