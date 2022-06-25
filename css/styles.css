@@ -630,7 +630,8 @@ buttons {
     position: relative;
     text-align: center;
     padding: 20px 0;
-    margin: auto;
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);
+    overflow: hidden;
 }
 .form-container span{
     font-weight: bold;
@@ -642,6 +643,10 @@ buttons {
 }
 .form-button{
     display: inline-block;
+}
+
+.form-button span{
+    color: #000000;
 }
 .form-container form{
     max-width: 300px;
