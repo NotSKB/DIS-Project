@@ -116,6 +116,11 @@ function login(){
     Indicator.style.transform = "translateX(25px)";
 }
 
+document.querySelector(".input-field").addEventListener('click', function(){
+  backgroundColor = '#F2F2F2';
+});
+
+
 document.addEventListener("DOMContentLoaded", function () {
   teamChart();
   playersChart();

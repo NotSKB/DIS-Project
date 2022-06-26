@@ -632,6 +632,7 @@ buttons {
     padding: 20px 0;
     box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);
     overflow: hidden;
+    margin: auto;
 }
 .form-container span{
     font-weight: bold;
@@ -660,7 +661,6 @@ buttons {
     height: 30px;
     margin: 8px 5px;
     padding: 0 12px;
-    border: 1px solid #ccc;
 }
 .form-container form .btn{
     width:50%;
@@ -730,7 +730,7 @@ buttons {
 .input-field {
     width: 75%;
     padding: 5px;
-    background-color: #F2F2F2;
+    background-color: #f2f2f2;
 }
 
 .unameandpass {
