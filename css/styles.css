@@ -21,8 +21,12 @@ body {
     padding: 1.5rem;
 }
 
-.flexbox-item1:hover {
-    background-color: darkgray;
+.pages a:hover {
+    color: red;
+}
+
+.pages:hover{
+    color: red;
 }
 
 .pages {
@@ -309,6 +313,16 @@ a {
 
 }
 
+.footer-icon img {
+   height: 18px;
+   width: 18px;
+}
+
+.copyright img {
+    height: 10px;
+    width: 10px;
+ }
+
 .social-media {
     padding-top: 20px;
 }
@@ -589,7 +603,7 @@ buttons {
     .login-form label{
         font-size: 12px;
     }
-    .col-2 img{
+    .col-2 lock-image{
         max-width: 50%;
         padding: 50px 60px;
         margin: 0 10px;
@@ -703,7 +717,7 @@ buttons {
     flex-basis: 50%;
     min-width: 300px;
 }   
-.col-2 img{
+.lock-image{
     max-width: 50%;
     padding: 50px 100px;
     opacity: 80%;

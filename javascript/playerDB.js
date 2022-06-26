@@ -121,9 +121,5 @@ document.addEventListener("DOMContentLoaded", function () {
   playersChart();
 });
 
-document.querySelector(".input-field").addEventListener('click', function(){
-  backgroundColor = '#F2F2F2';
-});
-
 
 
