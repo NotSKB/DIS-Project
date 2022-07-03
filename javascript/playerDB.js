@@ -9,13 +9,7 @@ function teamChart() {
   new Chart(document.getElementById("doughnut-chart"), {
     type: "doughnut",
     data: {
-      labels: [
-        "Spain",
-        "England",
-        "Brazil",
-        "Wales",
-        "Portugal",
-      ],
+      labels: ["Spain", "England", "Brazil", "Wales", "Portugal"],
       datasets: [
         {
           label: "",
@@ -187,6 +181,77 @@ function login() {
   RegForm.style.transform = "translateX(300px)";
   LoginForm.style.transform = "translateX(280px)";
   Indicator.style.transform = "translateX(25px)";
+}
+
+// Login page login form validations
+
+function LoginValid() {
+  var luname = document.getElementById("uname").value;
+  var lpass = document.getElementById("pass").value;
+
+  var pwd_expression =
+    /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-])/;
+  var letters = /^[A-Za-z]+$/;
+  var alphanums = /^[A-Za-z]+$/;
+  var filter =
+    /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+  if ((luname === "") | (luname == null)) {
+    alert("Enter user name");
+  } else if (!alphanums.test(luname)) {
+    alert("User name field has alphabets only");
+  } else if ((lpass === "") | (lpass == null)) {
+    alert("Enter password");
+  } else if (!pwd_expression.test(lpass)) {
+    alert(
+      "Minimun 1 upper case, 1 lower case, 1 special character and 1 Numeric are required in Password"
+    );
+  } else if (lpass.length < 8) {
+    alert("Password minimum length is 8");
+  } else if (lpass.length > 12) {
+    alert("Password maximum length is 12");
+  } else {
+    window.location.reload();
+    alert("Login Successful!!!");
+  }
+}
+
+// login page register form validations
+
+function RegisterValid() {
+  const runame = document.getElementById("unamer").value;
+  const ruemail = document.getElementById("emailr").value;
+  const rupass = document.getElementById("passr").value;
+
+  var pwd_expression =
+    /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-])/;
+  var letters = /^[A-Za-z]+/;
+  var alphanums = /^[A-Za-z]+$/;
+  var filter =
+    /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+  if ((ruemail === "") | (ruemail == null)) {
+    alert("Please enter your user email id");
+  } else if (!filter.test(ruemail)) {
+    alert("Invalid email");
+  } else if ((runame === "") | (runame == null)) {
+    alert("Please enter the user name.");
+  } else if (!alphanums.test(runame)) {
+    alert("User name field has alphabets only");
+  } else if ((rupass === "") | (rupass == null)) {
+    alert("Please enter Password");
+  } else if (!pwd_expression.test(rupass)) {
+    alert(
+      "Minimun 1 upper case, 1 lower case, 1 special character and 1 Numeric are required in Password"
+    );
+  } else if (rupass.length < 8) {
+    alert("Password minimum length is 8");
+  } else if (rupass.length > 12) {
+    alert("Password maximum length is 12");
+  } else {
+    window.location.reload();
+    alert("Registration Successful!!!");
+  }
 }
 
 // Form validations function

@@ -58,17 +58,17 @@
                             <hr id="Indicator">
                         </div>
                         <form id="LoginForm">
-                            <input class="input-field unameandpass" type="text" placeholder="Username" required>
-                            <input class="input-field unameandpass" type="password" placeholder="password" required>
-                            <button type="submit" class="btn">Login</button>
+                            <input id="uname" class="input-field unameandpass" type="text" placeholder="Username" required>
+                            <input id="pass" class="input-field unameandpass" type="password" placeholder="password" required>
+                            <button type="button" class="btn" onclick="LoginValid()">Login</button>
                             <h5><a href="">Forgot Password?</a></h5>
 
                         </form>
                         <form id="RegForm">
-                            <input class="input-field unameandpass" type="text" placeholder="Username" required>
-                            <input class="input-field unameandpass" type="email" placeholder="Email" required>
-                            <input class="input-field unameandpass" type="password" placeholder="Password" required>
-                            <button type="submit" class="btn">Register</button>
+                            <input id="unamer" class="input-field unameandpass" type="text" placeholder="Username" required>
+                            <input id="emailr" class="input-field unameandpass" type="email" placeholder="Email" required>
+                            <input id="passr" class="input-field unameandpass" type="password" placeholder="Password" required>
+                            <button type="button" class="btn" onclick="RegisterValid()">Register</button>
                             <div style="padding-top: 5px ;">
                                 <p style="display: inline;">or register with</p>
                                 <a href="https://www.linkedin.com/" target="_blank" class="footer-icon"><img
