@@ -396,6 +396,12 @@ a {
     margin: 30px 70px 100px;
 }
 
+.buttons-pl {
+    height: auto;
+    width: auto;
+    margin: 10px 70px 50px;
+}
+
 /* *************************************** */
 /* premier league html */
 .players-table {
@@ -459,7 +465,7 @@ td a {
     border: 1px solid black;
     border-radius: 4px;
     background-color: #F2F2F2;
-    width: 48%;
+    /* width: 48%; */
     height: 30px;
     margin-bottom: 2rem;
     margin-top: auto;
@@ -469,6 +475,10 @@ td a {
     /* position: absolute; */
     font-size: 1.2em;
     width: 50%;
+}
+
+.search-err{
+    margin-top: 40px;
 }
 
 .form-section {
@@ -754,6 +764,19 @@ buttons {
     border-color: #3b3b3b;
     border-bottom-width: 1px;
     padding: 2px;
+}
+
+.error {
+    color: red;
+    font-size: 90%;
+}
+.row {
+    padding-bottom: 10px;
+}
+
+.highlights-img{
+    width: 2.5rem;
+    height: 2.5rem;
 }
 
 

@@ -1,18 +1,20 @@
+// Show or hide edit player form based on search value
 function showForm() {
   document.getElementById("show-form").style.display = "block";
   document.getElementById("show-button").style.display = "block";
 }
 
+// Players by Country Chart
 function teamChart() {
   new Chart(document.getElementById("doughnut-chart"), {
     type: "doughnut",
     data: {
       labels: [
-        "Manchester City",
-        "Manchester United",
-        "Liverpool",
-        "Leicester City",
-        "Wolverhampton Wanderers",
+        "Spain",
+        "England",
+        "Brazil",
+        "Wales",
+        "Portugal",
       ],
       datasets: [
         {
@@ -29,9 +31,9 @@ function teamChart() {
           datalabels: {
             color: "white",
             font: {
-                weight: "bold",
-              }
-          }
+              weight: "bold",
+            },
+          },
         },
       ],
     },
@@ -50,6 +52,7 @@ function teamChart() {
   });
 }
 
+// Players by Position Chart
 function playersChart() {
   new Chart(document.getElementById("bar-chart"), {
     type: "bar",
@@ -63,7 +66,7 @@ function playersChart() {
       ],
       datasets: [
         {
-          label: "",
+          label: "Striker",
           backgroundColor: [
             "#3e95cd",
             "#8e5ea2",
@@ -82,44 +85,282 @@ function playersChart() {
       ],
     },
     options: {
-        legend: {
-            display: false
-         },
+      plugins: {
+        tooltip: {
+          enabled: false,
+        },
+      },
+      legend: {
+        display: false,
+      },
       title: {
         display: true,
         text: "Number of Players by Position",
       },
       scales: {
         y: {
-            grace: '1%',
-        }
+          grace: "1%",
+        },
       },
     },
     plugins: [ChartDataLabels],
   });
 }
 
-function register(){
-    var LoginForm = document.getElementById("LoginForm");
-    var RegForm = document.getElementById("RegForm");   
-    var Indicator = document.getElementById("Indicator"); 
-    RegForm.style.transform = "translateX(0px)";
-    LoginForm.style.transform = "translateX(0px)";
-    Indicator.style.transform = "translateX(150px)";
+// Top Goal Scorers Chart
+function goalsChart() {
+  var xValues = [
+    " Cristiano Ronaldo",
+    "Harry Kane",
+    "Son Heung Min",
+    "Kevin De Bruyne",
+    "Erling Haaland",
+    "Darwin Núñez",
+    "Virgil Van Dijk",
+    "Trent Alexander Arnold",
+    "Thiago Alcântara",
+    "Thiago Silva",
+    "Mohammad Salah",
+  ];
+  var yValues = [350, 247, 107, 57, 153, 48, 70, 35, 21, 37, 24];
+  var barColors = [
+    "rgba(255, 99, 132, 0.5)",
+    "rgba(255, 159, 64, 0.5)",
+    "rgba(255, 205, 86, 0.5)",
+    "rgba(75, 192, 192, 0.5)",
+    "rgba(54, 162, 235, 0.5)",
+    "rgba(153, 102, 255, 0.5)",
+    "rgba(201, 203, 207, 0.5)",
+    "rgba(255,215,0,0.5)",
+    "rgba(0,0,255,0.5)",
+    "rgba(255,177,78,0.5)",
+    "rgba(15,194,69,0.5)",
+  ];
+
+  new Chart("myChart", {
+    type: "bar",
+    data: {
+      labels: xValues,
+      datasets: [
+        {
+          backgroundColor: barColors,
+          data: yValues,
+          label: "Cristiano Ronaldo is the leading goal scorer",
+          datalabels: {
+            color: "gray",
+            font: {
+              weight: "bold",
+            },
+          },
+        },
+      ],
+    },
+    options: {
+      plugins: {
+        tooltip: {
+          enabled: false,
+        },
+      },
+      legend: { display: false },
+      title: {
+        display: true,
+        text: "Goals Scored in Premier League",
+      },
+    },
+    plugins: [ChartDataLabels],
+  });
 }
-function login(){
-    var LoginForm = document.getElementById("LoginForm");
-    var RegForm = document.getElementById("RegForm");   
-    var Indicator = document.getElementById("Indicator"); 
-    RegForm.style.transform = "translateX(300px)";
-    LoginForm.style.transform = "translateX(280px)";
-    Indicator.style.transform = "translateX(25px)";
+
+// Login page Functions
+function register() {
+  var LoginForm = document.getElementById("LoginForm");
+  var RegForm = document.getElementById("RegForm");
+  var Indicator = document.getElementById("Indicator");
+  RegForm.style.transform = "translateX(0px)";
+  LoginForm.style.transform = "translateX(0px)";
+  Indicator.style.transform = "translateX(150px)";
+}
+function login() {
+  var LoginForm = document.getElementById("LoginForm");
+  var RegForm = document.getElementById("RegForm");
+  var Indicator = document.getElementById("Indicator");
+  RegForm.style.transform = "translateX(300px)";
+  LoginForm.style.transform = "translateX(280px)";
+  Indicator.style.transform = "translateX(25px)";
+}
+
+// Form validations function
+function formValidations() {
+  document
+    .querySelector(".form-submit")
+    ?.addEventListener("click", function () {
+      validateForm();
+    });
+}
+
+function printError(elemId, hintMsg, eID) {
+  document.getElementById(eID).style.marginBottom = 0;
+  document.getElementById(elemId).style.marginBottom = "2rem";
+
+  document.getElementById(elemId).innerHTML = hintMsg;
+}
+
+// Defining a function to validate form
+function validateForm() {
+  // Retrieving the values of form elements
+  var fname = document.contactForm.FName.value;
+  var lname = document.contactForm.LName.value;
+  var DOB = document.contactForm.DOB.value;
+  var weight = document.contactForm.weight.value;
+  var team = document.contactForm.team.value;
+  var country = document.contactForm.country.value;
+  var Position = document.contactForm.Position.value;
+  var goals = document.contactForm.goals.value;
+  var matches = document.contactForm.matches.value;
+
+  // Defining error variables with a default value
+  var FnameErr =
+    (LnameErr =
+    DOBErr =
+    weightErr =
+    teamErr =
+    countryErr =
+    positionErr =
+    teamErr =
+    goalErr =
+      true);
+
+  // Validate name
+  if (fname == "") {
+    printError("FnameErr", "Please enter First name", "FName");
+  } else {
+    var regex = /^[a-zA-Z\s]+$/;
+    if (regex.test(fname) === false) {
+      printError("FnameErr", "Please enter a valid  First name", "FName");
+    } else {
+      printError("FnameErr", "", "FName");
+      FnameErr = false;
+    }
+  }
+  if (lname == "") {
+    printError("LnameErr", "Please enter Last name", "LName");
+  } else {
+    var regex = /^[a-zA-Z\s]+$/;
+    if (regex.test(lname) === false) {
+      printError("LnameErr", "Please enter a valid Last name", "LName");
+    } else {
+      printError("LnameErr", "", "LName");
+      LnameErr = false;
+    }
+  }
+  // Validate email address
+  if (DOB == "") {
+    printError("DOBErr", "Please select DOB", "DOB");
+  } else {
+    printError("DOBErr", "", "DOB");
+    DOBErr = false;
+  }
+
+  // Validate mobile number
+  if (weight == "") {
+    printError("weightErr", "Please enter weight", "weight");
+  } else {
+    var regex = /^[1-9]/;
+    if (regex.test(weight) === false) {
+      printError("weightErr", "Please enter a valid weight", "weight");
+    } else {
+      printError("weightErr", "", "weight");
+      weightErr = false;
+    }
+  }
+
+  // Validate country
+  if (country == "Select") {
+    printError("countryErr", "Please select a country", "country");
+  } else {
+    printError("countryErr", "", "country");
+    countryErr = false;
+  }
+  // Validate Team
+  if (team == "Select") {
+    printError("teamErr", "Please select a Team", "team");
+  } else {
+    printError("teamErr", "", "team");
+    teamErr = false;
+  }
+  // Validate position
+  if (Position == "Select") {
+    printError("positionErr", "Please select a Position", "Position");
+  } else {
+    printError("positionErr", "", "Position");
+    positionErr = false;
+  }
+  if (goals == "") {
+    printError("goalErr", "Please enter goals scored", "goals");
+  } else {
+    printError("goalErr", "", "goals");
+    goalErr = false;
+  }
+  if (matches == "") {
+    printError("matchErr", "Please enter matches played", "matches");
+  } else {
+    var regex = /^[1-9]/;
+    if (regex.test(matches) === false) {
+      printError("matchErr", "Please enter matches played", "matches");
+    } else {
+      printError("matchErr", "", "matches");
+      matchErr = false;
+    }
+  }
+  if (
+    matchErr == false &&
+    goalErr == false &&
+    FnameErr == false &&
+    LnameErr == false &&
+    DOBErr == false &&
+    weightErr == false &&
+    teamErr == false &&
+    countryErr == false &&
+    positionErr == false
+  ) {
+    window.location.href.includes("editplayer")
+      ? (window.location.href = "update.html")
+      : (window.location.href = "submit.html");
+  } else {
+    return false;
+  }
+}
+
+// Search validation in edit player
+function searchValidations() {
+  document
+    .querySelector(".search-button")
+    ?.addEventListener("click", function () {
+      getInputValue();
+    });
+}
+
+function getInputValue() {
+  // Selecting the input element and get its value
+  var inputVal = document.getElementById("search").value;
+  if (inputVal == "") {
+    document.getElementById("search").style.marginBottom = 0;
+
+    document.getElementById("demo1").style.marginBottom = "2rem";
+    // Displaying the value
+    document.getElementById("demo1").innerHTML = "Please Enter the value";
+  } else {
+    document.getElementById("demo1").innerHTML = "";
+    showForm();
+  }
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  teamChart();
-  playersChart();
+  if (document.querySelector(".charts")) {
+    teamChart();
+    playersChart();
+    goalsChart();
+  }
+  formValidations();
+  searchValidations();
 });
-
-
-

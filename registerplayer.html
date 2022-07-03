@@ -3,13 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Montserrat&display=swap"
         rel="stylesheet">
+    <link rel="shortcut icon" href="iconsandimages/icons/favicon.ico">
     <link rel="stylesheet" href="css/styles.css">
     <title>PlayerDB</title>
+
 </head>
 
 <body class="register-player">
@@ -31,87 +33,119 @@
             </div>
         </div>
         <div class="flexbox-item1 pages">
+            <a href="chart.html">Stats</a>
+        </div>
+        <div class="flexbox-item1 pages">
             <a href="aboutus.html">About Us</a>
         </div>
         <div class="flexbox-item1 pages">
-            <a href="account.html">Account</a>
+            <a href="account.html">Login</a>
         </div>
     </div>
+
 
     <!-- Player Form -->
     <div class="form-section">
         <h3>Player Registration</h3>
         <div class="player-form">
-            <form action="submit.html">
+            <form name="contactForm">
                 <label for="FName">First Name<span class="redstar">*</span></label>
-                <input type="text" id="FName" placeholder="First Name">
+                <div>
+                    <input type="text" id="FName" placeholder="First Name">
+                    <div class="error" id="FnameErr"></div>
+                </div>
 
                 <label for="LName">Last Name<span class="redstar">*</span></label>
-                <input type="text" id="LName" placeholder="Last Name">
+                <div>
+                    <input type="text" id="LName" placeholder="Last Name">
+                    <div class="error" id="LnameErr"></div>
+                </div>
 
                 <label for="DOB">Date of Birth<span class="redstar">*</span></label>
-                <input type="date" id="DOB">
+                <div>
+                    <input type="date" id="DOB">
+                    <div class="error" id="DOBErr"></div>
+                </div>
 
 
                 <label for="weight">Weight<span class="redstar">*</span></label>
-                <input type="number" name="weight" id="weight" placeholder="weight in kgs" required>
+                <div>
+                    <input type="number" name="weight" id="weight" placeholder="weight in kgs" required>
+                    <div class="error" id="weightErr"></div>
+                </div>
 
                 <label for="team">Team<span class="redstar">*</span></label>
-                <select id="team" name="team">
-                    <option>select team</option>
-                    <option value="MUN">Manchester United</option>
-                    <option value="MCI">Manchester City</option>
-                    <option value="LIV">Liverpool</option>
-                    <option value="THN">Tottenham Hotspur</option>
-                    <option value="WHU">West Ham United</option>
-                    <option value="ARS">Arsenal</option>
-                    <option value="CHE">Chelsea</option>
-                    <option value="CRY">Crystal Palace</option>
-                    <option value="LEE">Leeds United</option>
-                    <option value="EVE">Everton</option>
-                    <option value="BRN">Brighton</option>
-                    <option value="NUF">Newcastle United</option>
-                </select>
+                <div>
+                    <select id="team" name="team">
+                        <option value="Select">select team</option>
+                        <option value="MUN">Manchester United</option>
+                        <option value="MCI">Manchester City</option>
+                        <option value="LIV">Liverpool</option>
+                        <option value="THN">Tottenham Hotspur</option>
+                        <option value="WHU">West Ham United</option>
+                        <option value="ARS">Arsenal</option>
+                        <option value="CHE">Chelsea</option>
+                        <option value="CRY">Crystal Palace</option>
+                        <option value="LEE">Leeds United</option>
+                        <option value="EVE">Everton</option>
+                        <option value="BRN">Brighton</option>
+                        <option value="NUF">Newcastle United</option>
+                    </select>
+                    <div class="error" id="teamErr"></div>
+                </div>
 
                 <label for="country">Country of Origin<span class="redstar">*</span></label>
+                <div>
 
-                <select id="country" name="country">
-                    <option>select country</option>
-                    <option value="Portugal">Portugal</option>
-                    <option value="Spain">Spain</option>
-                    <option value="UK">United Kingdom</option>
-                    <option value="South Korea">South Korea</option>
-                    <option value="Brazil">Brazil</option>
-                    <option value="Uruguay">Uruguay</option>
-                    <option value="Netherlands">Netherlands</option>
-                    <option value="USA">United States</option>
-                    <option value="India">India</option>
-                    <option value="Colombia">Colombia</option>
-                    <option value="Argentina">Argentina</option>
-                    <option value="Armenia">Armenia</option>
-                </select>
+                    <select id="country" name="country">
+                        <option value="Select">select country</option>
+                        <option value="Portugal">Portugal</option>
+                        <option value="Spain">Spain</option>
+                        <option value="UK">United Kingdom</option>
+                        <option value="South Korea">South Korea</option>
+                        <option value="Brazil">Brazil</option>
+                        <option value="Uruguay">Uruguay</option>
+                        <option value="Netherlands">Netherlands</option>
+                        <option value="USA">United States</option>
+                        <option value="India">India</option>
+                        <option value="Colombia">Colombia</option>
+                        <option value="Argentina">Argentina</option>
+                        <option value="Armenia">Armenia</option>
+                    </select>
+                    <div class="error" id="countryErr"></div>
+                </div>
 
 
                 <label for="Position">Position<span class="redstar">*</span></label>
+                <div>
 
-                <select id="Position" name="position" required>
-                    <option>select playing position</option>
-                    <option value="Striker">Striker</option>
-                    <option value="Forward">Forward</option>
-                    <option value="GK">Goal Keeper</option>
-                    <option value="CB">Central Back</option>
-                    <option value="RB">Right Back</option>
-                    <option value="LB">Left Back</option>
-                    <option value="RW">Right Winger</option>
-                    <option value="LW">Left Winger</option>
-                    <option value="CM">Central Midfielder</option>
-                </select>
+                    <select id="Position" name="position" required>
+                        <option value="Select">select playing position</option>
+                        <option value="Striker">Striker</option>
+                        <option value="Forward">Forward</option>
+                        <option value="GK">Goal Keeper</option>
+                        <option value="CB">Central Back</option>
+                        <option value="RB">Right Back</option>
+                        <option value="LB">Left Back</option>
+                        <option value="RW">Right Winger</option>
+                        <option value="LW">Left Winger</option>
+                        <option value="CM">Central Midfielder</option>
+                    </select>
+                    <div class="error" id="positionErr"></div>
+                </div>
 
                 <label for="matches">Matches Played<span class="redstar">*</span></label>
-                <input type="number" id="matches">
+                <div>
+                    <input type="number" id="matches">
+                    <div class="error" id="matchErr"></div>
+                </div>
 
                 <label for="goals">Goals Scored<span class="redstar">*</span></label>
-                <input type="number" id="goals">
+                <div>
+                    <input type="number" id="goals">
+                    <div class="error" id="goalErr"></div>
+                </div>
+
 
             </form>
 
@@ -125,10 +159,10 @@
         </div>
         <div class="buttons">
             <!-- <input type="submit" value="submit" class="btn" > -->
-            <a href="submit.html" class="btn">Submit</a>
+            <button type="button" class="btn form-submit">Submit</button>
         </div>
     </div>
-
+    <script src="javascript/playerDB.js"></script>
     <!-- Footer Section -->
     <div class="footer">
         <div class="footer-content">
@@ -143,10 +177,13 @@
                         src="iconsandimages/icons/twitter.svg" alt="twitter"></a>
             </div>
             <div>
-                <p class="copyright"><img src="iconsandimages/icons/copyright.svg" alt=""> 2022 PlayerDB Inc.</p>
+                <p class="copyright"><img src="iconsandimages/icons/copyright.svg" alt="copyright"> 2022 PlayerDB Inc.
+                </p>
             </div>
         </div>
     </div>
+
+
 </body>
 
 </html>
